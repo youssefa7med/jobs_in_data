@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 import numpy  as np 
 import plotly.express as px
-from plotly.offline import iplot , plot
+
 
 st.title("Streamlit App about Jobs in Data")
 st.image('https://datasciencedojo.com/wp-content/uploads/data-analyst-job-scaled.jpg')
