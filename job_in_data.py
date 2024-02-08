@@ -27,7 +27,7 @@ if  selected_col == "Univariate":
 
     st.divider()
 
-    cat_col1 = st.radio('Select one category column to filter by:', cat_cols )
+    cat_col1 = st.selectbox('Select one category column to filter by:', cat_cols )
     ws = df[cat_col1].value_counts().reset_index()
     fig2 = px.bar(ws,x='index',y=cat_col1,text_auto=True,color = 'index',template='presentation',title=f'Number of {cat_col1}')
     st.plotly_chart(fig2, use_container_width=True)
@@ -48,8 +48,8 @@ if  selected_col == "Univariate":
 us = df[df['company_location']=='United States']
 columns = us.columns
     
-if  selected_col == "Bivariate":
-    col1 = st.radio('Select column for bivariate analysis it with salary in usd :',['company_size','experience_level','employment_type','job_category','work_year'] )
+if selected_col == "Bivariate":
+    col1 = st.selectbox('Select column for bivariate analysis it with salary in usd :',['company_size','experience_level','employment_type','job_category','work_year'] )
     if col1 != 'work_year':
         fig4 = px.bar(us.groupby(col1)['salary_in_usd'].mean().reset_index().round(2),text_auto=True,template='simple_white',title=f'Salary per {col1} ',x=col1,y='salary_in_usd',color=col1)
         st.plotly_chart(fig4)
@@ -57,14 +57,17 @@ if  selected_col == "Bivariate":
         fig4 = px.line(us.groupby('work_year')['salary_in_usd'].mean().reset_index().round(2),x='work_year',y='salary_in_usd',markers=True ,template='presentation',title='Salary about all jobs in USA per year')
         st.plotly_chart(fig4)
 
-if  selected_col == "Multivariate":
+        st.divider()
+
     year = st.radio('Select year does you want to visualize it :',[2020,2021,2022,2023])
     st.write('This is a barplot about salary for each category per the year of {}'.format(year))
     year_sal = us.groupby(['work_year','job_category'])['salary_in_usd'].mean()
     fig5 = px.bar(year_sal.get(year).reset_index(),x='job_category',text_auto=True,y='salary_in_usd',color='job_category',template='simple_white',title=f'Year of {year}')
     st.plotly_chart(fig5)
 
-    st.divider()
+    
+
+if selected_col == "Multivariate":
 
     year = st.radio('Select year does you want to visualize it:',[2020,2021,2022,2023])
     st.write('This is a barplot about work setting for each experience level per the year of {}'.format(year))
