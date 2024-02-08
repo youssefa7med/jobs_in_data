@@ -8,7 +8,7 @@ st.title("Streamlit App about Jobs in Data")
 st.image('https://datasciencedojo.com/wp-content/uploads/data-analyst-job-scaled.jpg')
 st.divider()
 
-# Load the dataset  
+# Load the dataset
 df = pd.read_csv('jobs_in_data.csv')
 df.drop_duplicates(inplace=True)
 
@@ -47,7 +47,7 @@ if  selected_col == "Univariate":
 
 us = df[df['company_location']=='United States']
 columns = us.columns
-    
+
 if selected_col == "Bivariate":
     col1 = st.selectbox('Select column for bivariate analysis it with salary in usd :',['company_size','experience_level','employment_type','job_category','work_year'] )
     if col1 != 'work_year':
