@@ -1,6 +1,6 @@
 # Jobs in Data Analysis
 
-This project is a comprehensive analysis of the job market in the data industry, providing valuable insights into trends, skills demand, and salary expectations. Through meticulous data analysis and visualization, this project aims to serve as a resource for job seekers, industry professionals, and hiring managers to understand the dynamics of the data job market.
+This project provides a comprehensive analysis of the job market in the data industry, offering valuable insights into trends, skills demand, and salary expectations. Through meticulous data analysis and visualization, this project serves as a resource for job seekers, industry professionals, and hiring managers to understand the dynamics of the data job market.
 
 ## Overview
 
@@ -53,6 +53,10 @@ The data industry is rapidly evolving, with roles such as Data Scientist, Data A
   - Application of machine learning models to predict salary ranges or job demand based on specific skills or locations.
   - Use of regression, classification, or clustering techniques to provide deeper insights into the data.
 
+## Live Application
+
+Explore the interactive analysis and visualizations of the job market directly through the following Streamlit application: [Jobs in Data Analysis Dashboard](https://jobindata.streamlit.app/).
+
 ## Installation
 
 To replicate this analysis or explore the data further, follow these steps:
@@ -76,7 +80,7 @@ To replicate this analysis or explore the data further, follow these steps:
      ```
    - For interactive visualizations:
      ```bash
-     python app.py
+     streamlit run app.py
      ```
 
 ## Usage
@@ -91,7 +95,7 @@ To replicate this analysis or explore the data further, follow these steps:
 
 ## Contributing
 
-I welcome and encourage contributions from the community. Whether it's improving the analysis, adding new data sources, or enhancing the visualizations, your input is valuable. Please fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! Whether it’s improving the analysis, adding new data sources, or enhancing the visualizations, your input is valuable. Please fork the repository, make your changes, and submit a pull request.
 
 ## License
 
@@ -99,4 +103,4 @@ This project is licensed under the MIT License. For more information, please ref
 
 ## Acknowledgments
 
-This project represents a significant professional effort in data analysis and visualization. I would like to thank the open-source community for providing the tools and libraries that made this analysis possible. Special thanks to the data platforms and job boards that provided the raw data for this study.
+This project represents a significant professional effort in data analysis and visualization. Special thanks to the open-source community for providing the tools and libraries that made this analysis possible. Thanks also to the data platforms and job boards that provided the raw data for this study.
