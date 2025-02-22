@@ -1,4 +1,5 @@
 # Jobs in Data Analysis
+![GIF](https://miro.medium.com/v2/resize:fit:1400/1*gh02Ik1v8Z8oqSQFrrgrWQ.gif)
 
 This project provides a comprehensive analysis of the job market in the data industry, offering valuable insights into trends, skills demand, and salary expectations. Through meticulous data analysis and visualization, this project serves as a resource for job seekers, industry professionals, and hiring managers to understand the dynamics of the data job market.
 
